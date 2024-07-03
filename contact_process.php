@@ -1,35 +1,25 @@
 <?php
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Retrieve and sanitize form inputs
-    $to = "akshaynavale5915@gmail.com";
-    $from = filter_var($_REQUEST['email'], FILTER_SANITIZE_EMAIL);
-    $name = htmlspecialchars($_REQUEST['name']);
-    $subject = htmlspecialchars($_REQUEST['subject']);
-    $cmessage = htmlspecialchars($_REQUEST['message']);
+// Validate and sanitize inputs
+function sanitize_input($data) {
+    return htmlspecialchars(stripslashes(trim($data)));
+}
 
-    // Validate email
-    if (!filter_var($from, FILTER_VALIDATE_EMAIL)) {
-        echo "Invalid email format.";
-        exit;
-    }
+$to = "akshaynavale5915@gmail.com";
+$from = isset($_REQUEST['email']) ? filter_var($_REQUEST['email'], FILTER_VALIDATE_EMAIL) : '';
+$name = isset($_REQUEST['name']) ? sanitize_input($_REQUEST['name']) : '';
+$subject_from_user = isset($_REQUEST['subject']) ? sanitize_input($_REQUEST['subject']) : '';
+$number = isset($_REQUEST['number']) ? sanitize_input($_REQUEST['number']) : '';
+$cmessage = isset($_REQUEST['message']) ? sanitize_input($_REQUEST['message']) : '';
 
-    // Validate required fields
-    if (empty($name) || empty($subject) || empty($cmessage)) {
-        echo "All fields are required.";
-        exit;
-    }
-
-    // Email headers
+if ($from && $name && $subject_from_user && $cmessage) {
     $headers = "From: $from\r\n";
     $headers .= "Reply-To: $from\r\n";
     $headers .= "MIME-Version: 1.0\r\n";
-    $headers .= "Content-Type: text/html; charset=ISO-8859-1\r\n";
+    $headers .= "Content-Type: text/html; charset=UTF-8\r\n";
 
-    // Email subject
-    $email_subject = "You have a message from your Bitmap Photography.";
+    $subject = "You have a message from your Bitmap Photography.";
 
-    // Email body
     $logo = 'img/logo.png';
     $link = '#';
 
@@ -37,24 +27,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "<table style='width: 100%;'>";
     $body .= "<thead style='text-align: center;'><tr><td style='border:none;' colspan='2'>";
     $body .= "<a href='{$link}'><img src='{$logo}' alt='Logo'></a><br><br>";
-    $body .= "</td></tr></thead><tbody>";
-    $body .= "<tr><td style='border:none;'><strong>Name:</strong> {$name}</td></tr>";
-    $body .= "<tr><td style='border:none;'><strong>Email:</strong> {$from}</td></tr>";
-    $body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject}</td></tr>";
+    $body .= "</td></tr></thead><tbody><tr>";
+    $body .= "<td style='border:none;'><strong>Name:</strong> {$name}</td>";
+    $body .= "<td style='border:none;'><strong>Email:</strong> {$from}</td>";
+    $body .= "</tr>";
+    $body .= "<tr><td style='border:none;'><strong>Subject:</strong> {$subject_from_user}</td></tr>";
     $body .= "<tr><td colspan='2' style='border:none;'>{$cmessage}</td></tr>";
     $body .= "</tbody></table>";
     $body .= "</body></html>";
 
-    // Send email
-    $send = mail($to, $email_subject, $body, $headers);
+    $send = mail($to, $subject, $body, $headers);
 
     if ($send) {
-        echo "Message sent successfully!";
+        echo "Email sent successfully.";
     } else {
-        echo "Failed to send message.";
+        echo "Failed to send email.";
     }
 } else {
-    echo "Invalid request.";
+    echo "Invalid input.";
 }
 
 ?>
