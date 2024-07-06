@@ -1,6 +1,8 @@
 <?php
 
-// Validate and sanitize inputs
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 function sanitize_input($data) {
     return htmlspecialchars(stripslashes(trim($data)));
 }
@@ -46,5 +48,4 @@ if ($from && $name && $subject_from_user && $cmessage) {
 } else {
     echo "Invalid input.";
 }
-
 ?>
