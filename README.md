@@ -9,7 +9,7 @@ Welcome to my portfolio repository! Here, you'll find an overview of my projects
 - [Home](#home)
 - [About](#about)
 - [Services](#services)
-- [Projects](#portfolio)
+- [Projects](#projects)
 - [Contact](#contact)
 
 ## Home
@@ -32,14 +32,14 @@ Detailed information about my services can be found [here](https://akshay20n.git
 
 ## Projects
 
-Explore my projects on my [portfolio website](https://akshay20n.github.io/portfolio/portfolio). Below are a few highlights:
+Explore my projects on my [portfolio website](https://akshay20n.github.io/portfolio/projects). Below are a few highlights:
 
 ### [Project 1: Random Programmers Joke Generator](https://akshay20n.github.io/Project1/)
 - **Description:** Project1 is a fun and interactive webpage that generates random programming jokes. It's perfect for developers looking to take a quick break and have a laugh. The jokes are fetched from a public API and displayed on the webpage.
 - **Technologies Used:** HTML5,CSS3,JavaScript,Official Joke API.
 - **Key Features:** Generates random programming jokes,Simple and clean user interface,Responsive design for use on any device,Lightweight and fast.
 
-*More projects are available on my [website](https://akshay20n.github.io/portfolio/portfolio).*
+*More projects are available on my [website](https://akshay20n.github.io/portfolio/projects).*
 
 ## Contact
 
