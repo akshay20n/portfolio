@@ -2,7 +2,7 @@
 
 # Akshay's Portfolio
 
-Welcome to my portfolio repository! Here, you'll find an overview of my projects and services. For detailed information, please visit my [portfolio website](https://akshay20n.github.io/portfolio).
+Welcome to my portfolio repository! Here, you'll find an overview of projects, services, and blog posts. For detailed information, please visit my [portfolio website](https://akshay20n.github.io/portfolio).
 
 ## Table of Contents
 
@@ -10,6 +10,7 @@ Welcome to my portfolio repository! Here, you'll find an overview of my projects
 - [About](#about)
 - [Services](#services)
 - [Projects](#projects)
+- [Blog](#blog)
 - [Contact](#contact)
 
 ## Home
@@ -40,6 +41,15 @@ Explore my projects on my [portfolio website](https://akshay20n.github.io/portfo
 - **Key Features:** Generates random programming jokes,Simple and clean user interface,Responsive design for use on any device,Lightweight and fast.
 
 *More projects are available on my [website](https://akshay20n.github.io/portfolio/projects).*
+
+## Blog
+
+Check out my latest blog posts on various topics related to technology, development, and DevOps on my [portfolio website](https://akshay20n.github.io/portfolio/blog). Here are a few highlights:
+
+### [Blog Post 1: How I Started Building My Portfolio Website](https://akshay20n.github.io/portfolio/blog/blog1)
+- **Summary:** Creating a personal portfolio website is a crucial step for any developer looking to showcase their skills and projects. In this blog post, I'll share my journey of building my portfolio website, the benefits of....
+  
+*More blog posts are available on my [website](https://akshay20n.github.io/portfolio/blog).*
 
 ## Contact
 
