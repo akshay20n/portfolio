@@ -1,6 +1,6 @@
 ---
 
-# Akshay's Portfolio
+# Akshay's Portfoli
 
 Welcome to my portfolio repository! Here, you'll find an overview of projects, services, and blog posts. For detailed information, please visit my [portfolio website](https://akshay20n.github.io/portfolio).
 
